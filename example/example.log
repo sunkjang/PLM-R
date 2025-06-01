@@ -1,0 +1,28 @@
+PLINK v1.90b6.24 64-bit (6 Jun 2021)
+Options in effect:
+  --file example
+  --make-bed
+  --out example
+
+Hostname: login2
+Working directory: /u/project/zaitlenlab/sunkjang/PLM_cg_revision/PLM-R/example
+Start time: Fri Apr 18 02:25:30 2025
+
+Random number seed: 1744968330
+48300 MB RAM detected; reserving 24150 MB for main workspace.
+Allocated 3222 MB successfully, after larger attempt(s) failed.
+Scanning .ped file... done.
+Performing single-pass .bed write (100 variants, 2000 people).
+--file: example-temporary.bed + example-temporary.bim + example-temporary.fam
+written.
+100 variants loaded from .bim file.
+2000 people (2000 males, 0 females) loaded from .fam.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 2000 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is exactly 1.
+100 variants and 2000 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to example.bed + example.bim + example.fam ... done.
+
+End time: Fri Apr 18 02:25:30 2025

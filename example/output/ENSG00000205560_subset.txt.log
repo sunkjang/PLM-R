@@ -1,0 +1,27 @@
+PLINK v2.0.0-a.6.11LM 64-bit Intel (14 Apr 2025)
+Options in effect:
+  --bfile ./example/example
+  --extract ./example/output/ENSG00000205560_vars.txt
+  --make-bed
+  --out ./example/output/ENSG00000205560_subset.txt
+
+Hostname: n7639
+Working directory: /u/project/zaitlenlab/sunkjang/PLM_cg_revision/PLM-R
+Start time: Fri Apr 18 23:45:10 2025
+
+Random number seed: 1745045110
+193121 MiB RAM detected, ~140676 available; reserving 96560 MiB for main
+workspace.
+Allocated 40736 MiB successfully, after larger attempt(s) failed.
+Using up to 36 threads (change this with --threads).
+2000 samples (0 females, 2000 males; 2000 founders) loaded from
+./example/example.fam.
+100 variants loaded from ./example/example.bim.
+Note: No phenotype data present.
+--extract: 100 variants remaining.
+100 variants remaining after main filters.
+Writing ./example/output/ENSG00000205560_subset.txt.fam ... done.
+Writing ./example/output/ENSG00000205560_subset.txt.bim ... done.
+Writing ./example/output/ENSG00000205560_subset.txt.bed ... done.
+
+End time: Fri Apr 18 23:45:11 2025
