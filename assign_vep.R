@@ -12,13 +12,13 @@ optspec = matrix(c(
     byrow=TRUE, ncol=4)
 
 opt = getopt( optspec)
-#chr = as.integer(opt$chr)
 gene_list = as.character(opt$gene_list) # gene id, genotype path
 vep_path = as.character(opt$vep_path) # Var, Gene, Feature, score
 out_path = as.character(opt$out_path)
 sample.id = as.character(opt$id) # fam file
 
 
+### Comment this out and provide your own paths
 vep.path = paste0("./example/example_score.txt") 
 gene_list = paste0("./example/gene_list")
 sample.id = paste0("./example/example.fam")
@@ -96,6 +96,7 @@ for( i in 1:nrow(gene_list)){
     # bind
     vep.assigned2 = merge(sample.id[,"IID"], vep.assigned, by="IID", all.x=TRUE)
     colnames(vep.assigned2)[2]=gene_id
+    vep.assigned2[is.na(get(gene_id)), paste(gene_id):=0]
     vep.assigned.all = merge(vep.assigned.all, vep.assigned2, by="IID", all.x=TRUE)
             
     } else {
@@ -106,13 +107,3 @@ for( i in 1:nrow(gene_list)){
 }
 
 fwrite( vep.assigned.all, file=out.path, row.names=FALSE,quote=FALSE, sep="\t")
-
-
-
-
-
-
-
-
-
-
