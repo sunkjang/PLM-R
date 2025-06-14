@@ -18,11 +18,11 @@ out_path = as.character(opt$out_path)
 sample.id = as.character(opt$id) # fam file
 
 
-### Comment this out and provide your own paths
-vep.path = paste0("./example/example_score.txt") 
-gene_list = paste0("./example/gene_list")
-sample.id = paste0("./example/example.fam")
-out.path = paste0("./example/example_ukbb_assigned.txt.gz")
+## ### Comment this out and provide your own paths
+## vep.path = paste0("./example/example_score.txt") 
+## gene_list = paste0("./example/gene_list")
+## sample.id = paste0("./example/example.fam")
+## out.path = paste0("./example/example_ukbb_assigned.txt.gz")
 
 ### Functions
 assign_vep = function(x){

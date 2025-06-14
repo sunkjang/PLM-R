@@ -5,7 +5,7 @@ library(dplyr)
 
 
 optspec = matrix(c(
-    'gene_list', 'g', 1, 'character', 
+    'ts_list', 't', 1, 'character', 
     'id',        'i', 1, 'character', 
     'vep_path',  'v', 1, 'character', 
     'out_path',  'o', 1, 'character'),
@@ -18,11 +18,11 @@ out_path = as.character(opt$out_path)
 sample.id = as.character(opt$id) # fam file
 
 
-### Comment this out and provide your own paths
-vep.path = paste0("./example/example_score.txt") 
-ts_list = paste0("./example/ts_list")
-sample.id = paste0("./example/example.fam")
-out.path = paste0("./example/example_isoform_ukbb_assigned.txt.gz")
+## ### Comment this out and provide your own paths
+## vep.path = paste0("./example/example_score.txt") 
+## ts_list = paste0("./example/ts_list")
+## sample.id = paste0("./example/example.fam")
+## out_path = paste0("./example/example_isoform_ukbb_assigned.txt.gz")
 
 ### Functions
 assign_vep = function(x){
@@ -108,5 +108,5 @@ for( i in 1:nrow(ts_list)){
     }
 }
 
-fwrite( vep.assigned.all, file=out.path, row.names=FALSE,quote=FALSE, sep="\t")
+fwrite( vep.assigned.all, file=out_path, row.names=FALSE,quote=FALSE, sep="\t")
 

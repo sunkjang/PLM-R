@@ -19,7 +19,7 @@ plink_path = as.character(opt$plink_path)
 out_path = as.character(opt$out_path)
 
 
-
+## Comment this out and provide your own files
 ## gs_path = "./example/ENSG00000205560_gs.txt"
 ## plink_path = "/u/project/zaitlenlab/sunkjang/bin/plink2"
 ## geno_path =  "./example/example"
