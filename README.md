@@ -5,7 +5,7 @@ This is a github repository for sample codes used to generate results for the fo
 The codes were tested in R4.4 with following R packages : getopt_1.20.4, data.table_1.14.10
 
 ## General description
-1) Subset genotype file to gene-specific variants
+1) Subset genotype file to gene-specific variants \
 genotype_subset_wrapper.R : subset plink format genotype file to the file containing varinats in a given set of genes.
 2) Assign VEP scores for individuals \
 assign_vep.R : convert genotype matrix to PLM score matrix for each gene. \
