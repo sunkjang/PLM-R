@@ -38,7 +38,7 @@ associate.R : perform linear regression/firth logistic regression for continuous
 ```bash
 ./assign_vep_isoform.R
 --ts_list # a text file containing gene names, transcript names, and paths for subsetted genotype files
---id : genotype sample ID flie 
+--id # genotype sample ID flie
 --vep_path # a list of variants and corresonding vep scores 
 --out_path # output path
 ```
@@ -52,4 +52,6 @@ associate.R : perform linear regression/firth logistic regression for continuous
 --out_file # output path
  
 ```
+
+Please see the files in the ./example folder for examples of the file formats.
 
