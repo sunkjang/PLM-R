@@ -7,9 +7,11 @@ The codes were tested in R4.4 with following R packages : getopt_1.20.4, data.ta
 ## General description
 1) Subset genotype file to gene-specific variants \
 genotype_subset_wrapper.R : subset plink format genotype file to the file containing varinats in a given set of genes.
+
 2) Assign VEP scores for individuals \
 assign_vep.R : convert genotype matrix to PLM score matrix for each gene. \
 assign_vep_isoform.R : convert genotype matrix to PLM score matrix for each isoform (transcript). 
+
 3) Perform regression \
 associate.R : perform linear regression/firth logistic regression for continuous/binary traits. 
 
