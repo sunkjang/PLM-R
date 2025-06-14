@@ -12,4 +12,13 @@ associate.R : perform linear regression/firth logistic regression for continuous
 
 
 ## Parameters
+```bash
+./genotype_subset_wrapper.R
+```
+
+./assign_vep.R
+
+./assign_vep_isoform.R
+
+./associate.R
 
