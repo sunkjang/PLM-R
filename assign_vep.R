@@ -33,7 +33,7 @@ assign_vep = function(x){
 
 
 ### Load VEP scores: make sure that higher scores mean higher pathogenicity
-vep = fread( vep.path ) 
+vep = fread( vep_path ) 
 col.sel = c("Var","Gene","Feature","score")
 vep = vep[, ..col.sel]
 vep = vep[!is.na(score)]
@@ -59,7 +59,7 @@ for( i in 1:nrow(gene_list)){
     # Load gene subset
     gene_id = gene_list$V1[i]
     tmpfile = tempfile()
-    rds = snp_readBed(gene_list$V2, backingfile = tmpfile)
+    rds = snp_readBed(gene_list$V2[i], backingfile = tmpfile)
     geno = snp_attach(rds)
     
     # Subset vep 
@@ -71,14 +71,13 @@ for( i in 1:nrow(gene_list)){
 
     if( length(var.ind)>0){  # run if more than 0 variant is left
         
+    geno.nomis = snp_fastImputeSimple(geno$genotypes,method="mean0")  # mean imputation for missing genotype
+    geno$genotypes = geno.nomis               
     rds2 = snp_subset( geno, ind.col = var.ind)
     geno.sub = snp_attach(rds2)
     sample.id = data.table( geno.sub$fam$sample.ID )
     colnames(sample.id)="IID"
 
-    rm(geno)
-    rm(rds)
-    gc()
 
     # Order vep variants
     rvs2 = geno.sub$map$marker.ID
@@ -106,4 +105,4 @@ for( i in 1:nrow(gene_list)){
     }
 }
 
-fwrite( vep.assigned.all, file=out.path, row.names=FALSE,quote=FALSE, sep="\t")
+fwrite( vep.assigned.all, file=out_path, row.names=FALSE,quote=FALSE, sep="\t")
